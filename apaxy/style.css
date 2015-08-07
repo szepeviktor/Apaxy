@@ -1,0 +1,287 @@
+/*------------------------------------*\
+    Apaxy
+    by @adamwhitcroft
+
+    Theme name: Apaxy
+    Theme author: @adamwhitcroft
+\*------------------------------------*/
+@import url('//fonts.googleapis.com/css?family=Open+Sans');
+/* Have to use @import for the font, as you can only specify a single stylesheet */
+* {
+	margin:0;
+	padding:0;
+	-webkit-box-sizing:border-box;
+	   -moz-box-sizing:border-box;
+	       box-sizing: border-box; 
+}
+
+html {
+	min-height:100%;
+	border-top:10px solid #ECEEF1;
+	border-bottom:10px solid #ECEEF1;
+	color:#61666c;
+	font-weight:400;
+	font-size:1em;
+	font-family:'Open Sans', sans-serif;
+	line-height:2em;
+	background-color:#DDD;
+}
+body {
+	padding:20px;
+	-webkit-backface-visibility:hidden;
+}
+code {
+	font-family:consolas,monospace;	
+}
+a {
+	color:#61666c;
+	text-decoration:none;
+}
+a:hover {
+	color:#2a2a2a;
+}
+/*------------------------------------*\
+    Wrapper
+\*------------------------------------*/
+.wrapper {
+	margin:0 auto;
+	padding-top:20px;
+	max-width:500px;
+}
+/*------------------------------------*\
+    Demo block
+\*------------------------------------*/
+.block {
+	font-size:.875em;
+	margin:20px 0;
+	padding:20px;
+	color:#9099A3;
+}
+/*------------------------------------*\
+    Table (directory listing)
+\*------------------------------------*/
+table {
+	width:100%;
+	border-collapse:collapse;
+	font-size:.875em;
+}
+tr {
+	outline:0;
+	border:0;
+}
+tr:hover td {
+	background:#f6f6f6;
+}
+th {
+	text-align:left;
+	font-size:.75em;
+	padding-right:20px;
+}
+/* Column: Filename */
+th.colname {
+	width:65%;
+}
+/* Column: Last Modified */
+th.coldate {
+}
+/* Column: Size */
+th.colsize {
+	width:5%;
+}
+tr td:first-of-type {
+	padding-left:10px;
+	padding-right:10px;
+}
+td {
+	padding:5px 0;
+	outline:0;
+	border:0;
+	border-bottom:1px solid #edf1f5;
+	vertical-align:middle;
+	text-align:left;
+	-webkit-transition:background 300ms ease;
+	   -moz-transition:background 300ms ease;
+	    -ms-transition:background 300ms ease;
+	     -o-transition:background 300ms ease;
+	        transition:background 300ms ease;
+}
+td a{
+	display: block;
+}
+tr.parent a[href^="/"] {
+	color:#9099A3;
+}
+	.parent a[href^="/"]:hover {
+		color:#2281d0;
+	}
+/*------------------------------------*\
+    Footer
+\*------------------------------------*/
+.footer {
+	text-align:center;
+	font-size:.75em;
+}
+
+
+td.colname a:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-image: url(icons/default.png);
+    background-repeat: no-repeat;
+    vertical-align: bottom;
+    margin: 0 8px 8px 0;
+}
+
+td.colname a[href$="/"]:before { background-image: url(icons/folder.png); }
+
+td.colname a[href$="../"]:before { background-image: url(icons/folder-home.png); }
+
+/* FIXME
+blank.png ^^BLANKICON^^
+
+text.png text/*
+image.png image/*
+audio.png audio/*
+video.png video/*
+*/
+
+body::after {
+    content: "Apaxy by @adamwhitcroft";
+    display: block;
+    float: right;
+    font-size: 0.5em;
+}
+
+td.colname a[href$=".7z"]:before { background-image: url(icons/archive.png); }
+td.colname a[href$=".bz2"]:before { background-image: url(icons/archive.png); }
+td.colname a[href$=".cab"]:before { background-image: url(icons/archive.png); }
+td.colname a[href$=".gz"]:before { background-image: url(icons/archive.png); }
+td.colname a[href$=".tar"]:before { background-image: url(icons/archive.png); }
+td.colname a[href$=".aac"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".aif"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".aifc"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".aiff"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".ape"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".au"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".flac"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".iff"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".m4a"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".mid"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".mp3"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".mpa"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".ra"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".wav"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".wma"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".f4a"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".f4b"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".oga"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".ogg"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".xm"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".it"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".s3m"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".mod"]:before { background-image: url(icons/audio.png); }
+td.colname a[href$=".bin"]:before { background-image: url(icons/bin.png); }
+td.colname a[href$=".hex"]:before { background-image: url(icons/bin.png); }
+td.colname a[href$=".bmp"]:before { background-image: url(icons/bmp.png); }
+td.colname a[href$=".c"]:before { background-image: url(icons/c.png); }
+td.colname a[href$=".xlsx"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xlsm"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xltx"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xltm"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xlam"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xlr"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".xls"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".csv"]:before { background-image: url(icons/calc.png); }
+td.colname a[href$=".iso"]:before { background-image: url(icons/cd.png); }
+td.colname a[href$=".cpp"]:before { background-image: url(icons/cpp.png); }
+td.colname a[href$=".css"]:before { background-image: url(icons/css.png); }
+td.colname a[href$=".sass"]:before { background-image: url(icons/css.png); }
+td.colname a[href$=".scss"]:before { background-image: url(icons/css.png); }
+td.colname a[href$=".deb"]:before { background-image: url(icons/deb.png); }
+td.colname a[href$=".doc"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".docx"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".docm"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".dot"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".dotx"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".dotm"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".log"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".msg"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".odt"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".pages"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".rtf"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".tex"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".wpd"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".wps"]:before { background-image: url(icons/doc.png); }
+td.colname a[href$=".svg"]:before { background-image: url(icons/draw.png); }
+td.colname a[href$=".svgz"]:before { background-image: url(icons/draw.png); }
+td.colname a[href$=".ai"]:before { background-image: url(icons/eps.png); }
+td.colname a[href$=".eps"]:before { background-image: url(icons/eps.png); }
+td.colname a[href$=".exe"]:before { background-image: url(icons/exe.png); }
+td.colname a[href$=".gif"]:before { background-image: url(icons/gif.png); }
+td.colname a[href$=".h"]:before { background-image: url(icons/h.png); }
+td.colname a[href$=".html"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".xhtml"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".shtml"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".htm"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".URL"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".url"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".ico"]:before { background-image: url(icons/ico.png); }
+td.colname a[href$=".jar"]:before { background-image: url(icons/java.png); }
+td.colname a[href$=".jpg"]:before { background-image: url(icons/jpg.png); }
+td.colname a[href$=".jpeg"]:before { background-image: url(icons/jpg.png); }
+td.colname a[href$=".jpe"]:before { background-image: url(icons/jpg.png); }
+td.colname a[href$=".js"]:before { background-image: url(icons/js.png); }
+td.colname a[href$=".json"]:before { background-image: url(icons/js.png); }
+td.colname a[href$=".md"]:before { background-image: url(icons/markdown.png); }
+td.colname a[href$=".pkg"]:before { background-image: url(icons/package.png); }
+td.colname a[href$=".dmg"]:before { background-image: url(icons/package.png); }
+td.colname a[href$=".pdf"]:before { background-image: url(icons/pdf.png); }
+td.colname a[href$=".php"]:before { background-image: url(icons/php.png); }
+td.colname a[href$=".phtml"]:before { background-image: url(icons/php.png); }
+td.colname a[href$=".m3u"]:before { background-image: url(icons/playlist.png); }
+td.colname a[href$=".m3u8"]:before { background-image: url(icons/playlist.png); }
+td.colname a[href$=".pls"]:before { background-image: url(icons/playlist.png); }
+td.colname a[href$=".pls8"]:before { background-image: url(icons/playlist.png); }
+td.colname a[href$=".png"]:before { background-image: url(icons/png.png); }
+td.colname a[href$=".ps"]:before { background-image: url(icons/ps.png); }
+td.colname a[href$=".psd"]:before { background-image: url(icons/psd.png); }
+td.colname a[href$=".py"]:before { background-image: url(icons/py.png); }
+td.colname a[href$=".rar"]:before { background-image: url(icons/rar.png); }
+td.colname a[href$=".rb"]:before { background-image: url(icons/rb.png); }
+td.colname a[href$=".rpm"]:before { background-image: url(icons/rpm.png); }
+td.colname a[href$=".rss"]:before { background-image: url(icons/rss.png); }
+td.colname a[href$=".bat"]:before { background-image: url(icons/script.png); }
+td.colname a[href$=".cmd"]:before { background-image: url(icons/script.png); }
+td.colname a[href$=".sh"]:before { background-image: url(icons/script.png); }
+td.colname a[href$=".sql"]:before { background-image: url(icons/sql.png); }
+td.colname a[href$=".tiff"]:before { background-image: url(icons/tiff.png); }
+td.colname a[href$=".tif"]:before { background-image: url(icons/tiff.png); }
+td.colname a[href$=".txt"]:before { background-image: url(icons/text.png); }
+td.colname a[href$=".nfo"]:before { background-image: url(icons/text.png); }
+td.colname a[href$=".asf"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".asx"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".avi"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".flv"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".mkv"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".mov"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".mp4"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".mpg"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".rm"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".srt"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".swf"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".vob"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".wmv"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".m4v"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".f4v"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".f4p"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".ogv"]:before { background-image: url(icons/video.png); }
+td.colname a[href$=".xml"]:before { background-image: url(icons/xml.png); }
+td.colname a[href$=".zip"]:before { background-image: url(icons/zip.png); }
+
+td.colname a[href$=".msi"]:before { background-image: url(icons/msi.png); }
+td.colname a[href$=".msu"]:before { background-image: url(icons/msi.png); }
+td.colname a[href$=".htm"]:before { background-image: url(icons/html.png); }
+td.colname a[href$=".EXE"]:before { background-image: url(icons/exe.png); }
+td.colname a[href$=".ZIP"]:before { background-image: url(icons/zip.png); }
