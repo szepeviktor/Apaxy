@@ -34,7 +34,8 @@ Build_apaxy4runabove() {
 
     # FIXME Add: html bg / @adamwhitcroft / th rules / td rules / additional PNG-s+rules
 
-    swift upload $CONTAINER} ./Apaxy-master/apaxy/theme/icons --object-name=apaxy/icons
-    swift upload $CONTAINER} ./Apaxy-master/apaxy/theme/style.css --object-name=apaxy/style.css
+    # https://community.runabove.com/kb/en/object-storage/how-to-distribute-static-content-with-object-storage.html
+    swift upload ${CONTAINER} ./Apaxy-master/apaxy/theme/icons --object-name=apaxy/icons
+    swift upload ${CONTAINER} ./Apaxy-master/apaxy/theme/style.css --object-name=apaxy/style.css
     swift post --header "X-Container-Meta-Web-Listings-CSS: /apaxy/style.css" ${CONTAINER}
 }
